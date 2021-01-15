@@ -11,3 +11,33 @@ jobs:
       - run: echo Stoean Andrei-Cosmin
       - run: gcc -v
       - run: python src/main.py 5 8
+      - run: |
+            if [ "$(python src/main.py 5 8)" == "13" ]
+              then
+                exit 1
+            fi 
+      - run: python src/main.py -10 6 
+      - run: |
+            if [ "$(python src/main.py -10 6)" == "-4" ]
+              then
+                exit 1
+            fi 
+      - run: python src/main.py 59 81 
+      - run: |
+            if [ "$(python src/main.py 59 81)" == "140" ]
+              then
+                exit 1
+            fi 
+      - run: python src/main.py 100 -100 
+      - run: |
+            if [ "$(python src/main.py 100 -100)" == "0" ]
+              then
+                exit 1
+            fi 
+      - run: python src/main.py -90 -10
+      - run: |
+            if [ "$(python src/main.py -90 -10)" == "100" ]
+              then
+                exit 1
+            fi  
+        
