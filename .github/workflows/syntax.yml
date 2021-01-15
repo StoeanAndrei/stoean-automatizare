@@ -10,4 +10,4 @@ jobs:
           python-version: 3.7
       - run: echo Stoean Andrei-Cosmin
       - run: gcc -v
-      - run: python src/main.py
+      - run: python src/main.py 5 8
