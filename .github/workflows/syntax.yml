@@ -36,7 +36,7 @@ jobs:
             fi 
       - run: python src/main.py -90 -10
       - run: |
-            if [ "$(python src/main.py -90 -10)" == "-100" ]
+            if [ "$(python src/main.py -90 -10)" != "-100" ]
               then
                 exit 1
             fi  
